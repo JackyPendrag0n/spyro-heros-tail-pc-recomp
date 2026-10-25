@@ -1,0 +1,39 @@
+# Builds the port and publishes a GitHub Release with the AppImage.
+# Runs when a tag like v1.0 is pushed, or by hand from the Actions tab (Run workflow).
+name: Release
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag
+        default: v1.0
+permissions:
+  contents: write
+jobs:
+  build:
+    # 22.04 has glibc 2.35, so the build runs on every distro the README lists
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: ./build.sh --deps --appimage
+      - name: Pack the plain build
+        run: |
+          mkdir -p out
+          cp dist/spyro-heros-tail-x86_64.AppImage out/
+          tar czf out/spyro-heros-tail-linux-x86_64.tar.gz -C dist xboxrun run.sh default.xbsym
+      - name: Publish the release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag || github.ref_name }}
+          name: Spyro A Hero's Tail PC port ${{ github.event.inputs.tag || github.ref_name }}
+          body: |
+            Bring your own game: see the README for how to set up your disc image.
+
+            - **Linux:** `spyro-heros-tail-x86_64.AppImage` - make it executable and run it with your game folder.
+              The `.tar.gz` holds the same build as plain files (`run.sh`, `xboxrun`, `default.xbsym`).
+            - **Windows:** download the source zip below, unzip it and double-click `windows\Install-Spyro.bat` (see docs/WINDOWS.md).
+            - **Mac:** Intel Macs in a Linux VM, see docs/MAC.md.
+          files: out/*
