@@ -1,0 +1,15 @@
+*.o
+loader/xboxrun
+loader/gen_kernel.c
+loader/third_party/ffmpeg32/
+tools/appimagetool-*.AppImage
+dist/
+game/
+xbox_hdd/
+xboxrun.log
+__pycache__/
+*.iso
+*.xiso
+*.xbe
+Filelist.*
+*.xmv

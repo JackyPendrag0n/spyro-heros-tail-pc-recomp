@@ -1,0 +1,1493 @@
+[
+ {
+  "slot": "0x2ee180",
+  "ordinal": 277,
+  "name": "RtlEnterCriticalSection",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN PRTL_CRITICAL_SECTION CriticalSection"
+  ]
+ },
+ {
+  "slot": "0x2ee184",
+  "ordinal": 294,
+  "name": "RtlLeaveCriticalSection",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN PRTL_CRITICAL_SECTION CriticalSection"
+  ]
+ },
+ {
+  "slot": "0x2ee188",
+  "ordinal": 291,
+  "name": "RtlInitializeCriticalSection",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN PRTL_CRITICAL_SECTION CriticalSection"
+  ]
+ },
+ {
+  "slot": "0x2ee18c",
+  "ordinal": 161,
+  "name": "KfLowerIrql",
+  "kind": "FUNC",
+  "conv": "FASTCALL",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN uchar_xt NewIrql"
+  ]
+ },
+ {
+  "slot": "0x2ee190",
+  "ordinal": 129,
+  "name": "KeRaiseIrqlToDpcLevel",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "uchar_xt",
+  "nargs": 0,
+  "params": []
+ },
+ {
+  "slot": "0x2ee194",
+  "ordinal": 65,
+  "name": "IoCreateDevice",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 6,
+  "params": [
+   "IN PDRIVER_OBJECT DriverObject",
+   "IN ulong_xt DeviceExtensionSize",
+   "IN PSTRING DeviceName OPTIONAL",
+   "IN ulong_xt DeviceType",
+   "IN boolean_xt Exclusive",
+   "OUT PDEVICE_OBJECT* DeviceObject"
+  ]
+ },
+ {
+  "slot": "0x2ee198",
+  "ordinal": 289,
+  "name": "RtlInitAnsiString",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 2,
+  "params": [
+   "IN OUT PANSI_STRING DestinationString",
+   "IN PCSZ SourceString"
+  ]
+ },
+ {
+  "slot": "0x2ee19c",
+  "ordinal": 145,
+  "name": "KeSetEvent",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "long_xt",
+  "nargs": 3,
+  "params": [
+   "IN PRKEVENT Event",
+   "IN KPRIORITY Increment",
+   "IN boolean_xt Wait"
+  ]
+ },
+ {
+  "slot": "0x2ee1a0",
+  "ordinal": 159,
+  "name": "KeWaitForSingleObject",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 5,
+  "params": [
+   "IN PVOID Object",
+   "IN KWAIT_REASON WaitReason",
+   "IN KPROCESSOR_MODE WaitMode",
+   "IN boolean_xt Alertable",
+   "IN PLARGE_INTEGER Timeout OPTIONAL"
+  ]
+ },
+ {
+  "slot": "0x2ee1a4",
+  "ordinal": 113,
+  "name": "KeInitializeTimerEx",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 2,
+  "params": [
+   "IN PKTIMER Timer",
+   "IN TIMER_TYPE Type"
+  ]
+ },
+ {
+  "slot": "0x2ee1a8",
+  "ordinal": 107,
+  "name": "KeInitializeDpc",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 3,
+  "params": [
+   "KDPC *Dpc",
+   "PKDEFERRED_ROUTINE DeferredRoutine",
+   "PVOID DeferredContext"
+  ]
+ },
+ {
+  "slot": "0x2ee1ac",
+  "ordinal": 74,
+  "name": "IoInvalidDeviceRequest",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 2,
+  "params": [
+   "IN PDEVICE_OBJECT DeviceObject",
+   "IN PIRP Irp"
+  ]
+ },
+ {
+  "slot": "0x2ee1b0",
+  "ordinal": 178,
+  "name": "MmPersistContiguousMemory",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 3,
+  "params": [
+   "IN PVOID BaseAddress",
+   "IN ulong_xt NumberOfBytes",
+   "IN boolean_xt Persist"
+  ]
+ },
+ {
+  "slot": "0x2ee1b4",
+  "ordinal": 165,
+  "name": "MmAllocateContiguousMemory",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "PVOID",
+  "nargs": 1,
+  "params": [
+   "IN ulong_xt NumberOfBytes"
+  ]
+ },
+ {
+  "slot": "0x2ee1b8",
+  "ordinal": 164,
+  "name": "LaunchDataPage",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "PLAUNCH_DATA_PAGE"
+ },
+ {
+  "slot": "0x2ee1bc",
+  "ordinal": 171,
+  "name": "MmFreeContiguousMemory",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN PVOID BaseAddress"
+  ]
+ },
+ {
+  "slot": "0x2ee1c0",
+  "ordinal": 301,
+  "name": "RtlNtStatusToDosError",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ulong_xt",
+  "nargs": 1,
+  "params": [
+   "IN ntstatus_xt Status"
+  ]
+ },
+ {
+  "slot": "0x2ee1c4",
+  "ordinal": 49,
+  "name": "HalReturnToFirmware",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "DECLSPEC_NORETURN",
+  "nargs": 1,
+  "params": [
+   "RETURN_FIRMWARE Routine"
+  ]
+ },
+ {
+  "slot": "0x2ee1c8",
+  "ordinal": 305,
+  "name": "RtlTimeToTimeFields",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 2,
+  "params": [
+   "IN PLARGE_INTEGER Time",
+   "OUT PTIME_FIELDS TimeFields"
+  ]
+ },
+ {
+  "slot": "0x2ee1cc",
+  "ordinal": 128,
+  "name": "KeQuerySystemTime",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "PLARGE_INTEGER CurrentTime"
+  ]
+ },
+ {
+  "slot": "0x2ee1d0",
+  "ordinal": 156,
+  "name": "KeTickCount",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "volatile dword_xt"
+ },
+ {
+  "slot": "0x2ee1d4",
+  "ordinal": 304,
+  "name": "RtlTimeFieldsToTime",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "boolean_xt",
+  "nargs": 2,
+  "params": [
+   "IN PTIME_FIELDS TimeFields",
+   "OUT PLARGE_INTEGER Time"
+  ]
+ },
+ {
+  "slot": "0x2ee1d8",
+  "ordinal": 24,
+  "name": "ExQueryNonVolatileSetting",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 5,
+  "params": [
+   "IN dword_xt ValueIndex",
+   "OUT dword_xt *Type",
+   "OUT PVOID Value",
+   "IN size_xt ValueLength",
+   "OUT PSIZE_T ResultLength OPTIONAL"
+  ]
+ },
+ {
+  "slot": "0x2ee1dc",
+  "ordinal": 187,
+  "name": "NtClose",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 1,
+  "params": [
+   "IN HANDLE Handle"
+  ]
+ },
+ {
+  "slot": "0x2ee1e0",
+  "ordinal": 218,
+  "name": "NtQueryVolumeInformationFile",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 5,
+  "params": [
+   "IN HANDLE FileHandle",
+   "OUT PIO_STATUS_BLOCK IoStatusBlock",
+   "OUT PFILE_FS_SIZE_INFORMATION FileInformation",
+   "IN ulong_xt Length",
+   "IN FS_INFORMATION_CLASS FileInformationClass"
+  ]
+ },
+ {
+  "slot": "0x2ee1e4",
+  "ordinal": 202,
+  "name": "NtOpenFile",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 6,
+  "params": [
+   "OUT PHANDLE FileHandle",
+   "IN access_mask_xt DesiredAccess",
+   "IN POBJECT_ATTRIBUTES ObjectAttributes",
+   "OUT PIO_STATUS_BLOCK IoStatusBlock",
+   "IN ulong_xt ShareAccess",
+   "IN ulong_xt OpenOptions"
+  ]
+ },
+ {
+  "slot": "0x2ee1e8",
+  "ordinal": 236,
+  "name": "NtWriteFile",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 8,
+  "params": [
+   "IN HANDLE FileHandle",
+   "IN HANDLE Event",
+   "IN PIO_APC_ROUTINE ApcRoutine OPTIONAL",
+   "IN PVOID ApcContext OPTIONAL",
+   "OUT PIO_STATUS_BLOCK IoStatusBlock",
+   "IN PVOID Buffer",
+   "IN ulong_xt Length",
+   "IN PLARGE_INTEGER ByteOffset OPTIONAL"
+  ]
+ },
+ {
+  "slot": "0x2ee1ec",
+  "ordinal": 40,
+  "name": "HalDiskCachePartitionCount",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "ulong_xt"
+ },
+ {
+  "slot": "0x2ee1f0",
+  "ordinal": 219,
+  "name": "NtReadFile",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 8,
+  "params": [
+   "IN HANDLE FileHandle",
+   "IN HANDLE Event OPTIONAL",
+   "IN PIO_APC_ROUTINE ApcRoutine OPTIONAL",
+   "IN PVOID ApcContext",
+   "OUT PIO_STATUS_BLOCK IoStatusBlock",
+   "OUT PVOID Buffer",
+   "IN ulong_xt Length",
+   "IN PLARGE_INTEGER ByteOffset OPTIONAL"
+  ]
+ },
+ {
+  "slot": "0x2ee1f4",
+  "ordinal": 67,
+  "name": "IoCreateSymbolicLink",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 2,
+  "params": [
+   "IN PSTRING SymbolicLinkName",
+   "IN PSTRING DeviceName"
+  ]
+ },
+ {
+  "slot": "0x2ee1f8",
+  "ordinal": 215,
+  "name": "NtQuerySymbolicLinkObject",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 3,
+  "params": [
+   "HANDLE LinkHandle",
+   "OUT PSTRING LinkTarget",
+   "OUT PULONG ReturnedLength OPTIONAL"
+  ]
+ },
+ {
+  "slot": "0x2ee1fc",
+  "ordinal": 203,
+  "name": "NtOpenSymbolicLinkObject",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 2,
+  "params": [
+   "OUT PHANDLE LinkHandle",
+   "IN POBJECT_ATTRIBUTES ObjectAttributes"
+  ]
+ },
+ {
+  "slot": "0x2ee200",
+  "ordinal": 69,
+  "name": "IoDeleteSymbolicLink",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 1,
+  "params": [
+   "IN PSTRING SymbolicLinkName"
+  ]
+ },
+ {
+  "slot": "0x2ee204",
+  "ordinal": 200,
+  "name": "NtFsControlFile",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 10,
+  "params": [
+   "IN HANDLE FileHandle",
+   "IN HANDLE Event OPTIONAL",
+   "IN PIO_APC_ROUTINE ApcRoutine OPTIONAL",
+   "IN PVOID ApcContext OPTIONAL",
+   "OUT PIO_STATUS_BLOCK IoStatusBlock",
+   "IN ulong_xt FsControlCode",
+   "IN PVOID InputBuffer OPTIONAL",
+   "IN ulong_xt InputBufferLength",
+   "OUT PVOID OutputBuffer OPTIONAL",
+   "IN ulong_xt OutputBufferLength"
+  ]
+ },
+ {
+  "slot": "0x2ee208",
+  "ordinal": 226,
+  "name": "NtSetInformationFile",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 5,
+  "params": [
+   "IN HANDLE FileHandle",
+   "OUT PIO_STATUS_BLOCK IoStatusBlock",
+   "IN PVOID FileInformation",
+   "IN ulong_xt Length",
+   "IN FILE_INFORMATION_CLASS FileInformationClass"
+  ]
+ },
+ {
+  "slot": "0x2ee20c",
+  "ordinal": 190,
+  "name": "NtCreateFile",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 9,
+  "params": [
+   "OUT PHANDLE FileHandle",
+   "IN access_mask_xt DesiredAccess",
+   "IN POBJECT_ATTRIBUTES ObjectAttributes",
+   "OUT PIO_STATUS_BLOCK IoStatusBlock",
+   "IN PLARGE_INTEGER AllocationSize OPTIONAL",
+   "IN ulong_xt FileAttributes",
+   "IN ulong_xt ShareAccess",
+   "IN ulong_xt CreateDisposition",
+   "IN ulong_xt CreateOptions"
+  ]
+ },
+ {
+  "slot": "0x2ee210",
+  "ordinal": 233,
+  "name": "NtWaitForSingleObject",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 3,
+  "params": [
+   "IN HANDLE Handle",
+   "IN boolean_xt Alertable",
+   "IN PLARGE_INTEGER Timeout"
+  ]
+ },
+ {
+  "slot": "0x2ee214",
+  "ordinal": 211,
+  "name": "NtQueryInformationFile",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 5,
+  "params": [
+   "IN HANDLE FileHandle",
+   "OUT PIO_STATUS_BLOCK IoStatusBlock",
+   "OUT PVOID FileInformation",
+   "IN ulong_xt Length",
+   "IN FILE_INFORMATION_CLASS FileInfo"
+  ]
+ },
+ {
+  "slot": "0x2ee218",
+  "ordinal": 198,
+  "name": "NtFlushBuffersFile",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 2,
+  "params": [
+   "PVOID FileHandle",
+   "OUT PIO_STATUS_BLOCK IoStatusBlock"
+  ]
+ },
+ {
+  "slot": "0x2ee21c",
+  "ordinal": 196,
+  "name": "NtDeviceIoControlFile",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 10,
+  "params": [
+   "IN HANDLE FileHandle",
+   "IN HANDLE Event OPTIONAL",
+   "IN PIO_APC_ROUTINE ApcRoutine OPTIONAL",
+   "IN PVOID ApcContext OPTIONAL",
+   "OUT PIO_STATUS_BLOCK IoStatusBlock",
+   "IN ulong_xt IoControlCode",
+   "IN PVOID InputBuffer OPTIONAL",
+   "IN ulong_xt InputBufferLength",
+   "OUT PVOID OutputBuffer OPTIONAL",
+   "IN ulong_xt OutputBufferLength"
+  ]
+ },
+ {
+  "slot": "0x2ee220",
+  "ordinal": 250,
+  "name": "ObfDereferenceObject",
+  "kind": "FUNC",
+  "conv": "FASTCALL",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN PVOID Object"
+  ]
+ },
+ {
+  "slot": "0x2ee224",
+  "ordinal": 76,
+  "name": "IoQueryVolumeInformation",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 5,
+  "params": [
+   "IN PFILE_OBJECT FileObject",
+   "IN FS_INFORMATION_CLASS FsInformationClass",
+   "IN ulong_xt Length",
+   "OUT PVOID FsInformation",
+   "OUT PULONG ReturnedLength"
+  ]
+ },
+ {
+  "slot": "0x2ee228",
+  "ordinal": 246,
+  "name": "ObReferenceObjectByHandle",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 3,
+  "params": [
+   "IN HANDLE Handle",
+   "IN POBJECT_TYPE ObjectType OPTIONAL",
+   "OUT PVOID *ReturnedObject"
+  ]
+ },
+ {
+  "slot": "0x2ee22c",
+  "ordinal": 71,
+  "name": "IoFileObjectType",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "OBJECT_TYPE"
+ },
+ {
+  "slot": "0x2ee230",
+  "ordinal": 336,
+  "name": "XcSHAUpdate",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 3,
+  "params": [
+   "IN PUCHAR pbSHAContext",
+   "IN PUCHAR pbInput",
+   "IN ulong_xt dwInputLength"
+  ]
+ },
+ {
+  "slot": "0x2ee234",
+  "ordinal": 335,
+  "name": "XcSHAInit",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN PUCHAR pbSHAContext"
+  ]
+ },
+ {
+  "slot": "0x2ee238",
+  "ordinal": 337,
+  "name": "XcSHAFinal",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 2,
+  "params": [
+   "IN PUCHAR pbSHAContext",
+   "IN PUCHAR pbDigest"
+  ]
+ },
+ {
+  "slot": "0x2ee23c",
+  "ordinal": 323,
+  "name": "XboxHDKey",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "uchar[16]"
+ },
+ {
+  "slot": "0x2ee240",
+  "ordinal": 325,
+  "name": "XboxSignatureKey",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "uchar[16]"
+ },
+ {
+  "slot": "0x2ee244",
+  "ordinal": 354,
+  "name": "XboxAlternateSignatureKeys",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "uchar[16][16]"
+ },
+ {
+  "slot": "0x2ee248",
+  "ordinal": 210,
+  "name": "NtQueryFullAttributesFile",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 2,
+  "params": [
+   "IN POBJECT_ATTRIBUTES ObjectAttributes",
+   "OUT PFILE_NETWORK_OPEN_INFORMATION FileInformation"
+  ]
+ },
+ {
+  "slot": "0x2ee24c",
+  "ordinal": 207,
+  "name": "NtQueryDirectoryFile",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 10,
+  "params": [
+   "IN HANDLE FileHandle",
+   "IN HANDLE Event OPTIONAL",
+   "IN PVOID ApcRoutine",
+   "IN PVOID ApcContext",
+   "OUT PIO_STATUS_BLOCK IoStatusBlock",
+   "OUT FILE_DIRECTORY_INFORMATION *FileInformation",
+   "IN ulong_xt Length",
+   "IN FILE_INFORMATION_CLASS FileInformationClass",
+   "IN PSTRING FileMask",
+   "IN boolean_xt RestartScan"
+  ]
+ },
+ {
+  "slot": "0x2ee250",
+  "ordinal": 16,
+  "name": "ExEventObjectType",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "OBJECT_TYPE"
+ },
+ {
+  "slot": "0x2ee254",
+  "ordinal": 225,
+  "name": "NtSetEvent",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 2,
+  "params": [
+   "IN HANDLE EventHandle",
+   "OUT PLONG PreviousState"
+  ]
+ },
+ {
+  "slot": "0x2ee258",
+  "ordinal": 234,
+  "name": "NtWaitForSingleObjectEx",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 4,
+  "params": [
+   "IN HANDLE Handle",
+   "IN char_xt WaitMode",
+   "IN boolean_xt Alertable",
+   "IN PLARGE_INTEGER Timeout"
+  ]
+ },
+ {
+  "slot": "0x2ee25c",
+  "ordinal": 99,
+  "name": "KeDelayExecutionThread",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 3,
+  "params": [
+   "IN KPROCESSOR_MODE WaitMode",
+   "IN boolean_xt Alertable",
+   "IN PLARGE_INTEGER Interval"
+  ]
+ },
+ {
+  "slot": "0x2ee260",
+  "ordinal": 143,
+  "name": "KeSetBasePriorityThread",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "long_xt",
+  "nargs": 2,
+  "params": [
+   "IN PKTHREAD Thread",
+   "IN long_xt Priority"
+  ]
+ },
+ {
+  "slot": "0x2ee264",
+  "ordinal": 259,
+  "name": "PsThreadObjectType",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "OBJECT_TYPE"
+ },
+ {
+  "slot": "0x2ee268",
+  "ordinal": 302,
+  "name": "RtlRaiseException",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN PEXCEPTION_RECORD ExceptionRecord"
+  ]
+ },
+ {
+  "slot": "0x2ee26c",
+  "ordinal": 258,
+  "name": "PsTerminateSystemThread",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN ntstatus_xt ExitStatus"
+  ]
+ },
+ {
+  "slot": "0x2ee270",
+  "ordinal": 255,
+  "name": "PsCreateSystemThreadEx",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 10,
+  "params": [
+   "OUT PHANDLE ThreadHandle",
+   "IN ulong_xt ThreadExtensionSize",
+   "IN ulong_xt KernelStackSize",
+   "IN ulong_xt TlsDataSize",
+   "OUT PHANDLE ThreadId OPTIONAL",
+   "IN PKSTART_ROUTINE StartRoutine",
+   "IN PVOID StartContext",
+   "IN boolean_xt CreateSuspended",
+   "IN boolean_xt DebuggerThread",
+   "IN PKSYSTEM_ROUTINE SystemRoutine OPTIONAL"
+  ]
+ },
+ {
+  "slot": "0x2ee274",
+  "ordinal": 166,
+  "name": "MmAllocateContiguousMemoryEx",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "PVOID",
+  "nargs": 5,
+  "params": [
+   "IN ulong_xt NumberOfBytes",
+   "IN physical_address_xt LowestAcceptableAddress",
+   "IN physical_address_xt HighestAcceptableAddress",
+   "IN ulong_xt Alignment OPTIONAL",
+   "IN ulong_xt ProtectionType"
+  ]
+ },
+ {
+  "slot": "0x2ee278",
+  "ordinal": 180,
+  "name": "MmQueryAllocationSize",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ulong_xt",
+  "nargs": 1,
+  "params": [
+   "IN PVOID BaseAddress"
+  ]
+ },
+ {
+  "slot": "0x2ee27c",
+  "ordinal": 182,
+  "name": "MmSetAddressProtect",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 3,
+  "params": [
+   "IN PVOID BaseAddress",
+   "IN ulong_xt NumberOfBytes",
+   "IN ulong_xt NewProtect"
+  ]
+ },
+ {
+  "slot": "0x2ee280",
+  "ordinal": 179,
+  "name": "MmQueryAddressProtect",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ulong_xt",
+  "nargs": 1,
+  "params": [
+   "IN PVOID VirtualAddress"
+  ]
+ },
+ {
+  "slot": "0x2ee284",
+  "ordinal": 322,
+  "name": "XboxHardwareInfo",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "XBOX_HARDWARE_INFO"
+ },
+ {
+  "slot": "0x2ee288",
+  "ordinal": 47,
+  "name": "HalRegisterShutdownNotification",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 2,
+  "params": [
+   "IN PHAL_SHUTDOWN_REGISTRATION ShutdownRegistration",
+   "IN boolean_xt Register"
+  ]
+ },
+ {
+  "slot": "0x2ee28c",
+  "ordinal": 324,
+  "name": "XboxKrnlVersion",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "XBOX_KRNL_VERSION"
+ },
+ {
+  "slot": "0x2ee290",
+  "ordinal": 83,
+  "name": "IoStartPacket",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 3,
+  "params": [
+   "IN PDEVICE_OBJECT DeviceObject",
+   "IN PIRP Irp",
+   "OUT PULONG Key OPTIONAL"
+  ]
+ },
+ {
+  "slot": "0x2ee294",
+  "ordinal": 87,
+  "name": "IofCompleteRequest",
+  "kind": "FUNC",
+  "conv": "FASTCALL",
+  "ret": "void_xt",
+  "nargs": 2,
+  "params": [
+   "IN PIRP Irp",
+   "IN cchar_xt PriorityBoost"
+  ]
+ },
+ {
+  "slot": "0x2ee298",
+  "ordinal": 81,
+  "name": "IoStartNextPacket",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN PDEVICE_OBJECT DeviceObject"
+  ]
+ },
+ {
+  "slot": "0x2ee29c",
+  "ordinal": 17,
+  "name": "ExFreePool",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN PVOID P"
+  ]
+ },
+ {
+  "slot": "0x2ee2a0",
+  "ordinal": 15,
+  "name": "ExAllocatePoolWithTag",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "PVOID",
+  "nargs": 2,
+  "params": [
+   "IN size_xt NumberOfBytes",
+   "IN ulong_xt Tag"
+  ]
+ },
+ {
+  "slot": "0x2ee2a4",
+  "ordinal": 359,
+  "name": "IoMarkIrpMustComplete",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "cchar_xt",
+  "nargs": 1,
+  "params": [
+   "IN PIRP Irp"
+  ]
+ },
+ {
+  "slot": "0x2ee2a8",
+  "ordinal": 358,
+  "name": "HalIsResetOrShutdownPending",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "boolean_xt",
+  "nargs": 0,
+  "params": []
+ },
+ {
+  "slot": "0x2ee2ac",
+  "ordinal": 149,
+  "name": "KeSetTimer",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "boolean_xt",
+  "nargs": 3,
+  "params": [
+   "IN PKTIMER Timer",
+   "IN LARGE_INTEGER DueTime",
+   "IN PKDPC Dpc OPTIONAL"
+  ]
+ },
+ {
+  "slot": "0x2ee2b0",
+  "ordinal": 97,
+  "name": "KeCancelTimer",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "boolean_xt",
+  "nargs": 1,
+  "params": [
+   "IN PKTIMER"
+  ]
+ },
+ {
+  "slot": "0x2ee2b4",
+  "ordinal": 326,
+  "name": "XeImageFileName",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "OBJECT_STRING"
+ },
+ {
+  "slot": "0x2ee2b8",
+  "ordinal": 356,
+  "name": "HalBootSMCVideoMode",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "dword_xt"
+ },
+ {
+  "slot": "0x2ee2bc",
+  "ordinal": 279,
+  "name": "RtlEqualString",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "boolean_xt",
+  "nargs": 3,
+  "params": [
+   "IN PSTRING String1",
+   "IN PSTRING String2",
+   "IN boolean_xt CaseInsensitive"
+  ]
+ },
+ {
+  "slot": "0x2ee2c0",
+  "ordinal": 327,
+  "name": "XeLoadSection",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 1,
+  "params": [
+   "IN PXBEIMAGE_SECTION Section"
+  ]
+ },
+ {
+  "slot": "0x2ee2c4",
+  "ordinal": 328,
+  "name": "XeUnloadSection",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 1,
+  "params": [
+   "IN PXBEIMAGE_SECTION Section"
+  ]
+ },
+ {
+  "slot": "0x2ee2c8",
+  "ordinal": 199,
+  "name": "NtFreeVirtualMemory",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 3,
+  "params": [
+   "IN OUT PVOID *BaseAddress",
+   "IN OUT PULONG FreeSize",
+   "IN ulong_xt FreeType"
+  ]
+ },
+ {
+  "slot": "0x2ee2cc",
+  "ordinal": 184,
+  "name": "NtAllocateVirtualMemory",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 5,
+  "params": [
+   "IN OUT PVOID *BaseAddress",
+   "IN ulong_xt ZeroBits",
+   "IN OUT PULONG AllocationSize",
+   "IN dword_xt AllocationType",
+   "IN dword_xt Protect"
+  ]
+ },
+ {
+  "slot": "0x2ee2d0",
+  "ordinal": 269,
+  "name": "RtlCompareMemoryUlong",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "size_xt",
+  "nargs": 3,
+  "params": [
+   "IN PVOID Source",
+   "IN size_xt Length",
+   "IN ulong_xt Pattern"
+  ]
+ },
+ {
+  "slot": "0x2ee2d4",
+  "ordinal": 217,
+  "name": "NtQueryVirtualMemory",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 2,
+  "params": [
+   "IN PVOID BaseAddress",
+   "OUT PMEMORY_BASIC_INFORMATION Buffer"
+  ]
+ },
+ {
+  "slot": "0x2ee2d8",
+  "ordinal": 360,
+  "name": "HalInitiateShutdown",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 0,
+  "params": []
+ },
+ {
+  "slot": "0x2ee2dc",
+  "ordinal": 357,
+  "name": "IdexChannelObject",
+  "kind": "VARIABLE",
+  "conv": "VAR",
+  "type": "IDE_CHANNEL_OBJECT"
+ },
+ {
+  "slot": "0x2ee2e0",
+  "ordinal": 44,
+  "name": "HalGetInterruptVector",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ulong_xt",
+  "nargs": 2,
+  "params": [
+   "IN ulong_xt BusInterruptLevel",
+   "OUT PKIRQL Irql"
+  ]
+ },
+ {
+  "slot": "0x2ee2e4",
+  "ordinal": 160,
+  "name": "KfRaiseIrql",
+  "kind": "FUNC",
+  "conv": "FASTCALL",
+  "ret": "uchar_xt",
+  "nargs": 1,
+  "params": [
+   "IN uchar_xt NewIrql"
+  ]
+ },
+ {
+  "slot": "0x2ee2e8",
+  "ordinal": 98,
+  "name": "KeConnectInterrupt",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "boolean_xt",
+  "nargs": 1,
+  "params": [
+   "IN PKINTERRUPT InterruptObject"
+  ]
+ },
+ {
+  "slot": "0x2ee2ec",
+  "ordinal": 109,
+  "name": "KeInitializeInterrupt",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 7,
+  "params": [
+   "OUT PKINTERRUPT Interrupt",
+   "IN PKSERVICE_ROUTINE ServiceRoutine",
+   "IN PVOID ServiceContext",
+   "IN ulong_xt Vector",
+   "IN KIRQL Irql",
+   "IN KINTERRUPT_MODE InterruptMode",
+   "IN boolean_xt ShareVector"
+  ]
+ },
+ {
+  "slot": "0x2ee2f0",
+  "ordinal": 151,
+  "name": "KeStallExecutionProcessor",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN ulong_xt MicroSeconds"
+  ]
+ },
+ {
+  "slot": "0x2ee2f4",
+  "ordinal": 340,
+  "name": "XcHMAC",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 7,
+  "params": [
+   "IN PBYTE pbKeyMaterial",
+   "IN ulong_xt cbKeyMaterial",
+   "IN PBYTE pbData",
+   "IN ulong_xt cbData",
+   "IN PBYTE pbData2",
+   "IN ulong_xt cbData2",
+   "OUT PBYTE HmacData"
+  ]
+ },
+ {
+  "slot": "0x2ee2f8",
+  "ordinal": 173,
+  "name": "MmGetPhysicalAddress",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "physical_address_xt",
+  "nargs": 1,
+  "params": [
+   "IN PVOID BaseAddress"
+  ]
+ },
+ {
+  "slot": "0x2ee2fc",
+  "ordinal": 175,
+  "name": "MmLockUnlockBufferPages",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 3,
+  "params": [
+   "IN PVOID BaseAddress",
+   "IN size_xt NumberOfBytes",
+   "IN boolean_xt UnlockPages"
+  ]
+ },
+ {
+  "slot": "0x2ee300",
+  "ordinal": 119,
+  "name": "KeInsertQueueDpc",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "boolean_xt",
+  "nargs": 3,
+  "params": [
+   "IN PKDPC Dpc",
+   "IN PVOID SystemArgument1",
+   "IN PVOID SystemArgument2"
+  ]
+ },
+ {
+  "slot": "0x2ee304",
+  "ordinal": 176,
+  "name": "MmLockUnlockPhysicalPage",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 2,
+  "params": [
+   "IN ulong_ptr_xt PhysicalAddress",
+   "IN boolean_xt UnlockPage"
+  ]
+ },
+ {
+  "slot": "0x2ee308",
+  "ordinal": 1,
+  "name": "AvGetSavedDataAddress",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "PVOID",
+  "nargs": 0,
+  "params": []
+ },
+ {
+  "slot": "0x2ee30c",
+  "ordinal": 2,
+  "name": "AvSendTVEncoderOption",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 4,
+  "params": [
+   "IN PVOID RegisterBase",
+   "IN ulong_xt Option",
+   "IN ulong_xt Param",
+   "OUT ulong_xt *Result"
+  ]
+ },
+ {
+  "slot": "0x2ee310",
+  "ordinal": 3,
+  "name": "AvSetDisplayMode",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ulong_xt",
+  "nargs": 6,
+  "params": [
+   "IN PVOID RegisterBase",
+   "IN ulong_xt Step",
+   "IN ulong_xt Mode",
+   "IN ulong_xt Format",
+   "IN ulong_xt Pitch",
+   "IN ulong_xt FrameBuffer"
+  ]
+ },
+ {
+  "slot": "0x2ee314",
+  "ordinal": 4,
+  "name": "AvSetSavedDataAddress",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN PVOID Address"
+  ]
+ },
+ {
+  "slot": "0x2ee318",
+  "ordinal": 46,
+  "name": "HalReadWritePCISpace",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 6,
+  "params": [
+   "BusNumber",
+   "SlotNumber",
+   "RegisterNumber",
+   "Buffer",
+   "Length",
+   "WritePCISpace"
+  ]
+ },
+ {
+  "slot": "0x2ee31c",
+  "ordinal": 100,
+  "name": "KeDisconnectInterrupt",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN PKINTERRUPT InterruptObject"
+  ]
+ },
+ {
+  "slot": "0x2ee320",
+  "ordinal": 8,
+  "name": "DbgPrint",
+  "kind": "FUNC",
+  "conv": "_cdecl",
+  "ret": "ulong_xt",
+  "nargs": 2,
+  "params": [
+   "PCHAR Format",
+   "..."
+  ]
+ },
+ {
+  "slot": "0x2ee324",
+  "ordinal": 168,
+  "name": "MmClaimGpuInstanceMemory",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "PVOID",
+  "nargs": 2,
+  "params": [
+   "IN size_xt NumberOfBytes",
+   "OUT size_xt *NumberOfPaddingBytes"
+  ]
+ },
+ {
+  "slot": "0x2ee328",
+  "ordinal": 142,
+  "name": "KeSaveFloatingPointState",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 1,
+  "params": [
+   "OUT PKFLOATING_SAVE PublicFloatSave"
+  ]
+ },
+ {
+  "slot": "0x2ee32c",
+  "ordinal": 139,
+  "name": "KeRestoreFloatingPointState",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 1,
+  "params": [
+   "IN PKFLOATING_SAVE PublicFloatSave"
+  ]
+ },
+ {
+  "slot": "0x2ee330",
+  "ordinal": 23,
+  "name": "ExQueryPoolBlockSize",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ulong_xt",
+  "nargs": 1,
+  "params": [
+   "IN PVOID PoolBlock"
+  ]
+ },
+ {
+  "slot": "0x2ee334",
+  "ordinal": 137,
+  "name": "KeRemoveQueueDpc",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "boolean_xt",
+  "nargs": 1,
+  "params": [
+   "IN PKDPC Dpc"
+  ]
+ },
+ {
+  "slot": "0x2ee338",
+  "ordinal": 153,
+  "name": "KeSynchronizeExecution",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "boolean_xt",
+  "nargs": 3,
+  "params": [
+   "IN PKINTERRUPT Interrupt",
+   "IN PKSYNCHRONIZE_ROUTINE SynchronizeRoutine",
+   "IN PVOID SynchronizeContext"
+  ]
+ },
+ {
+  "slot": "0x2ee33c",
+  "ordinal": 312,
+  "name": "RtlUnwind",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 4,
+  "params": [
+   "IN PVOID TargetFrame OPTIONAL",
+   "IN PVOID TargetIp OPTIONAL",
+   "IN PEXCEPTION_RECORD ExceptionRecord OPTIONAL",
+   "IN PVOID ReturnValue"
+  ]
+ },
+ {
+  "slot": "0x2ee340",
+  "ordinal": 95,
+  "name": "KeBugCheck",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "void_xt",
+  "nargs": 1,
+  "params": [
+   "IN ulong_xt BugCheckMode"
+  ]
+ },
+ {
+  "slot": "0x2ee344",
+  "ordinal": 308,
+  "name": "RtlUnicodeStringToAnsiString",
+  "kind": "FUNC",
+  "conv": "NTAPI",
+  "ret": "ntstatus_xt",
+  "nargs": 3,
+  "params": [
+   "IN OUT PSTRING DestinationString",
+   "IN PUNICODE_STRING SourceString",
+   "IN boolean_xt AllocateDestinationString"
+  ]
+ }
+]
