@@ -13,6 +13,7 @@ SRC="$1"; DEST="${2:-game}"
 [ -n "$SRC" ] || { sed -n '2,10p' "$0"; exit 1; }
 [ -e "$SRC" ] || { echo "No such file or folder: $SRC" >&2; exit 1; }
 
+PATH="$PATH:$HOME/.local/bin"   # where tools/get-extract-xiso.sh puts it
 if [ -f "$SRC" ]; then
     mkdir -p "$DEST"
     DEST=$(cd "$DEST" && pwd)
@@ -23,7 +24,7 @@ if [ -f "$SRC" ]; then
         echo "Extracting with extract-xiso into $DEST ..."
         extract-xiso -x "$SRC" -d "$DEST"
     else
-        echo "Install extract-xiso or xdvdfs first (see the top of this script / README.md)." >&2; exit 1
+        echo "Install extract-xiso or xdvdfs first. To build extract-xiso: tools/get-extract-xiso.sh --deps" >&2; exit 1
     fi
     GAME="$DEST"
 else

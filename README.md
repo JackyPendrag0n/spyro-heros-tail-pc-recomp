@@ -40,8 +40,8 @@ The full controls and debug-menu guide is in [docs/PLAYING.md](docs/PLAYING.md).
 
 | Platform | Status |
 |---|---|
-| **Linux** (x86-64) | Native. Build it from source or use the AppImage. |
-| **Windows 10/11** | Through **WSL2**, Windows' built-in Linux, with no native .exe. See [docs/WINDOWS.md](docs/WINDOWS.md). |
+| **Linux** (x86-64) | Native. Build it from source, or use the prebuilt AppImage in `prebuilt/`. |
+| **Windows 10/11** | Through **WSL2**, Windows' built-in Linux; there is no native .exe. `windows\Install-Spyro.bat` sets everything up and makes a desktop shortcut. See [docs/WINDOWS.md](docs/WINDOWS.md). |
 | **macOS** | Intel Macs only, inside a Linux virtual machine. Apple Silicon is not supported. See [docs/MAC.md](docs/MAC.md). |
 
 Why not native Windows or Mac builds? The game's code is 32-bit x86 and runs directly on the CPU.
@@ -63,7 +63,8 @@ at fixed addresses.
 
    Either an `.iso` (XISO) or the extracted files works.
 2. **Install an extractor.** Use either one:
-   - [`extract-xiso`](https://github.com/XboxDev/extract-xiso), packaged by many distros;
+   - [`extract-xiso`](https://github.com/XboxDev/extract-xiso). If your distro doesn't package it,
+     `tools/get-extract-xiso.sh --deps` builds it into `~/.local/bin`;
    - [`xdvdfs`](https://github.com/antangelo/xdvdfs), installed with `cargo install xdvdfs-cli`.
      It also reads full Redump images.
 3. **Extract and check** with the included script:
@@ -88,7 +89,7 @@ at fixed addresses.
 On a 64-bit x86 Linux system (Debian/Ubuntu, Fedora or Arch):
 
 ```sh
-git clone <this repo> && cd <this repo>
+git clone https://github.com/JackyPendrag0n/spyro-heros-tail-pc-recomp && cd spyro-heros-tail-pc-recomp
 ./build.sh --deps        # installs the 32-bit compiler, SDL2 and OpenGL packages (sudo), then builds
 ./build.sh --appimage    # optional: also pack dist/spyro-heros-tail-x86_64.AppImage
 ```
@@ -108,7 +109,7 @@ Requirements:
 ```sh
 dist/run.sh ~/games/spyro
 # or
-./spyro-heros-tail-x86_64.AppImage ~/games/spyro
+prebuilt/spyro-heros-tail-x86_64.AppImage ~/games/spyro
 ```
 
 - `run.sh` finds the game folder and checks for the 32-bit libraries. If any are missing, it

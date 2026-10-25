@@ -5,7 +5,29 @@ Linux features to do it (see the README). On Windows it runs inside **WSL2**, th
 Windows ships with. With **WSLg** (Windows 11, or Windows 10 22H2 with a current WSL), Linux
 windows and sound appear on your normal desktop.
 
-## 1. Install WSL2 with Ubuntu
+## The easy way: Install-Spyro.bat
+
+1. Download this repo: **Code → Download ZIP** on GitHub. Unzip it anywhere.
+2. Double-click `windows\Install-Spyro.bat`.
+   - If you don't have WSL2 and Ubuntu yet, it installs them, which needs administrator rights.
+     Restart if Windows asks you to, open **Ubuntu** from the Start menu once to pick a user name
+     and password, then double-click `Install-Spyro.bat` again.
+3. Pick your game when asked: your `.iso`, or press Cancel and pick a folder with the
+   extracted files.
+4. It builds the port inside Ubuntu, asking for your Ubuntu password once to install packages.
+   The first build takes a few minutes.
+5. Start the game with **Spyro A Hero's Tail** on your desktop.
+
+Run `Install-Spyro.bat` again any time to update. Your saves are kept.
+
+What it sets up, all inside Ubuntu:
+- the port in `~/spyro-port`;
+- your game in `~/games/spyro`;
+- `~/spyro-port/play.sh`, which the desktop shortcut runs.
+
+## By hand
+
+### 1. Install WSL2 with Ubuntu
 
 In PowerShell as administrator:
 
@@ -16,25 +38,25 @@ wsl --update
 
 Restart if asked, then open **Ubuntu** from the Start menu and create a user.
 
-## 2. Get the port
+### 2. Get the port
 
 In the Ubuntu window, either build it:
 
 ```sh
 sudo apt-get install -y git
-git clone <this repo> spyro && cd spyro
+git clone https://github.com/JackyPendrag0n/spyro-heros-tail-pc-recomp spyro && cd spyro
 ./build.sh --deps
 ```
 
-or download the AppImage from the Releases page. WSL usually has no FUSE, so run it with
+or use the prebuilt AppImage in `prebuilt/`. WSL usually has no FUSE, so run it with
 `--appimage-extract-and-run`:
 
 ```sh
-chmod +x spyro-heros-tail-x86_64.AppImage
-./spyro-heros-tail-x86_64.AppImage --appimage-extract-and-run ~/games/spyro
+chmod +x prebuilt/spyro-heros-tail-x86_64.AppImage
+prebuilt/spyro-heros-tail-x86_64.AppImage --appimage-extract-and-run ~/games/spyro
 ```
 
-## 3. Your game files
+### 3. Your game files
 
 Your Windows drives are under `/mnt/c`, `/mnt/d` and so on. For example, an ISO in your
 Downloads folder:
@@ -46,7 +68,7 @@ Downloads folder:
 Extract into your Linux home (`~/games/...`), not onto `/mnt/c`, because loading from the
 Windows drive is much slower.
 
-## 4. Run
+### 4. Run
 
 ```sh
 dist/run.sh ~/games/spyro
@@ -60,6 +82,7 @@ dist/run.sh ~/games/spyro
   ```sh
   XBOX_SCALE=1 dist/run.sh ~/games/spyro
   ```
+  The desktop shortcut already uses `XBOX_SCALE=1`. To change it, edit `~/spyro-port/play.sh`.
   The `gl:` line near the top of `xboxrun.log` names the renderer it got. Co-op is the heaviest
   case.
 - **Controllers.** WSL doesn't see USB controllers by default. You can pass one through with
