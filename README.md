@@ -40,7 +40,7 @@ The full controls and debug-menu guide is in [docs/PLAYING.md](docs/PLAYING.md).
 
 | Platform | Status |
 |---|---|
-| **Linux** (x86-64) | Native. Build it from source, or use the prebuilt AppImage in `prebuilt/`. |
+| **Linux** (x86-64) | Native. Download the AppImage from [Releases](https://github.com/JackyPendrag0n/spyro-heros-tail-pc-recomp/releases), or build it from source. |
 | **Windows 10/11** | Through **WSL2**, Windows' built-in Linux; there is no native .exe. `windows\Install-Spyro.bat` sets everything up and makes a desktop shortcut. See [docs/WINDOWS.md](docs/WINDOWS.md). |
 | **macOS** | Intel Macs only, inside a Linux virtual machine. Apple Silicon is not supported. See [docs/MAC.md](docs/MAC.md). |
 
@@ -164,3 +164,8 @@ Source layout:
 
 This is a fan project, not affiliated with or endorsed by Activision or Eurocom. It contains no
 game code or data: you supply your own legally made copy. *Spyro* is a trademark of Activision.
+
+## Making a release
+
+Run the **Release** workflow from the Actions tab (or push a `v*` tag). It builds the AppImage on
+Ubuntu 22.04 and publishes it as a GitHub Release.
